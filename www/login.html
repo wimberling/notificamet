@@ -1,0 +1,47 @@
+<!--/////////////////////////////////////////////////////////////-->
+<!--TEMPLATE DEL LOGIN-->
+<ons-modal var="myModal" direction="up">
+    <ons-toolbar>
+        <div class="navigation-bar">
+            <div class="left" class="navigation-bar__left">
+                <ons-toolbar-button
+                    ng-click="app.slidingMenu.toggleMenu()">
+                    <!--<ons-icon icon="ion-navicon"></ons-icon>-->                    
+                </ons-toolbar-button>
+            </div>
+            <div class="center" class="navigation-bar__center">
+                Login
+            </div>
+            <div class="right" class="navigation-bar__right">
+                <ons-toolbar-button
+                    ng-click="loginModal.hide()">
+                    <ons-icon icon="ion-android-close"></ons-icon>                    
+                </ons-toolbar-button>
+            </div>
+        </div>
+    </ons-toolbar> 
+    
+    <div style="text-align: center">
+        <p>
+            <ons-button ng-click="myModal.hide()">Hide modal</ons-button>
+        </p>
+    </div>
+    
+    <center>
+        <img class="logo" src="img/logo-notificamet4.PNG" alt="logo-notificamet"/>            
+    </center>
+
+    <div class="login-form">
+        <input id="id1" type="number" min="100" max="33000000" class="text-input--underbar" placeholder="Cédula" name="cedula" required>
+        <input type="password" class="text-input--underbar" placeholder="Contraseña" name="password" required>
+        <br>
+        <br>
+        <ons-button
+            modifier="large" class="login-button" type="submit">
+            Iniciar sesión
+        </ons-button>
+    </div>
+</ons-modal>
+
+<!--<ons-button modifier="quiet" class="opc-login">Olvidaste tu contraseña?</ons-button>
+        <ons-button modifier="quiet" class="opc-login">Eres nuevo?</ons-button>-->

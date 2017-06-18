@@ -1,0 +1,54 @@
+<!--/////////////////////////////////////////////////////////////-->
+<!--BARRA LATERAL (MENÚ)-->
+<ons-page style="background-color: rgb(201,201,201)">
+
+    <ons-list>
+        <ons-list-header
+            id="custom-category-list" class="head-menu">
+            OPCIONES               
+        </ons-list-header>
+        
+        <ons-list-item
+            modifier="tappable" class="list__item__line-height"
+            style="color: rgba(0,56,150,0.90); font-size:15px; font-weight:bold"
+            onclick="app.slidingMenu.setMainPage('timeline.html', {closeMenu: true})">
+            <i class="fa ion-ios-home fa-lg" style="color: rgba(0, 56, 150, 0.80)"></i>
+            &nbsp; &nbsp; &nbsp; Home
+        </ons-list-item>
+        <ons-list-item
+            modifier="tappable" class="list__item__line-height"
+            style="color: rgba(0,56,150,0.90); font-size:15px; font-weight:bold"
+            onclick="app.slidingMenu.setMainPage('favoritos.html', {closeMenu: true})">
+            <i class="fa ion-ios-heart fa-lg" style="color: rgba(0, 56, 150, 0.80)"></i>
+            &nbsp; &nbsp; &nbsp; Favoritos
+        </ons-list-item>
+        <ons-list-item
+            modifier="tappable" class="list__item__line-height"
+            style="color: rgba(0,56,150,0.90); font-size:15px; font-weight:bold"
+            onclick="app.slidingMenu.setMainPage('acerca.html', {closeMenu: true})">
+            <!--page2=login Verificar ya que al hacer inicio de sesion ya no debo mostrar esta
+            opcion en el menu podría mostrarse una opcion de logout-->
+            <i class="fa ion-information-circled fa-lg" style="color: rgba(0, 56, 150, 0.80)"></i>
+            &nbsp; &nbsp; &nbsp; Acerca de
+        </ons-list-item>    
+    </ons-list>
+    
+    <ons-list>
+        <ons-list-header
+            id="custom-category-list" class="head-menu">
+            ENLACES              
+        </ons-list-header>
+        
+        <a href="http://notificamet.unimet.edu.ve/estuRest2/user_login.php"
+            target="_blank" style="text-decoration: none">
+            <ons-list-item
+                modifier="tappable" class="list__item__line-height"
+                style="color: rgba(0,56,150,0.90); font-size:15px; font-weight:bold">
+                <ons-icon icon="fa-external-link" style="color: rgba(0, 56, 150, 0.80)"
+                    class="ons-icon fa-external-link fa" _compiled="">                   
+                </ons-icon>
+                 &nbsp; &nbsp; &nbsp; NotificaMet WEB
+            </ons-list-item>
+        </a>    
+    </ons-list>
+</ons-page>

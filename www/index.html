@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    
+    <script src="components/loader.js"></script>
+    <script src="components/monaca-onsenui/js/angular/angular.js"></script>
+    <script src="components/monaca-onsenui/js/onsenui.js"></script>
+    
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script> ===> Esto iba después del script de angular-onsenui--> 
+    <!--<script>
+        ons.bootstrap();
+    </script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="js/myApp.js"></script>
+    <script src="js/myCtrl.js"></script>
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+    
+</head>
+<body>
+    <ons-sliding-menu close-on-tap
+        var="app.slidingMenu" menu-page="menu.html" main-page="timeline.html"
+        side="left" type="overlay" max-slide-distance="220px">
+    </ons-sliding-menu>
+</body>
+</html>
+

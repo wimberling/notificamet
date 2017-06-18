@@ -1,0 +1,388 @@
+/*Logo----------------------------------------------------------------------*/
+.logo {
+    height: 100px;
+    padding-top: 20px;
+  
+    /*border: 2px solid rgb(242, 125, 0);
+    border-radius: 12px;*/
+}
+.logo2 {
+    height: 80px;
+    padding-top: 20px;
+    border-radius: 25px;
+}
+.acercade {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 5px;
+    color: rgb(120,120,120);
+}
+.firma {
+    float: right;
+    color: rgba(242,125,0,0.85);
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+/*Menu lateral--------------------------------------------------------------*/
+.head-menu {
+    background-color: rgba(242, 125, 0, 0.85);
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+    font-size: 10px;
+}
+
+
+/*color: rgba(0,56,150,0.80) AZUL UNIMET rgba(242,125,0,0.85) NARANJA UNIMET
+      rgb(201,201,201) GRIS CLARITO*/
+
+
+/*Timeline------------------------------------------------------------------*/
+.btn-log {
+    font-size: 12px; 
+    color: white;
+    padding: 8px;
+}
+
+.item {
+      padding: 10px;
+      line-height: 1;
+    }
+    .item-thum {
+      background-color: #ccc;
+      width: 50px;
+      height: 50px;
+      border-radius: 200px;
+    }
+    .item-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: rgb(60,60,60);
+      padding: 5px;
+    }
+    .item-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.3;
+      margin: 4px 0 0 0;
+      padding: 0 30px 0 0;
+    }
+    .item-label {
+      font-size: 12px;
+      color: #999;
+      margin-top: 15px;
+    }
+    .item-fecha {
+      font-size: 12px;
+      color: #999;
+      float: right;
+      margin-top: 15px;
+    }
+    .item-heart {
+        color: rgba(242,125,0,0.65);
+        float: right;
+        padding: 5px;
+    }.item-favorite {
+        color: rgba(242,125,0,0.65);
+        float: left;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+    .list__item__thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+    }
+    
+    
+/*Navigation bar item--CABECERA de la App------------------------------------------------------*/
+.navigation-bar {
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 17px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  white-space: nowrap;
+  overflow: hidden;
+  word-spacing: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  line-height: normal;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 2;
+  display: block;
+  height: 44px;
+  padding-left: 0;
+  padding-right: 0;
+  background: rgba(0,56,150,0.90);
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-weight: 400;
+  width: 100%;
+  white-space: nowrap;
+  border-bottom: none;
+  -webkit-background-size: 100% 1px;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: -webkit-linear-gradient(90deg, #bbb, #bbb 100%);
+  background-image: -moz-linear-gradient(90deg, #bbb, #bbb 100%);
+  background-image: -o-linear-gradient(90deg, #bbb, #bbb 100%);
+  background-image: linear-gradient(0deg, #bbb, #bbb 100%);
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .navigation-bar {
+    background-image: -webkit-linear-gradient(90deg, #bbb, #bbb 50%, transparent 50%);
+    background-image: -moz-linear-gradient(90deg, #bbb, #bbb 50%, transparent 50%);
+    background-image: -o-linear-gradient(90deg, #bbb, #bbb 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #bbb, #bbb 50%, transparent 50%);
+  }
+}
+.navigation-bar__bg {
+  background: rgba(0,56,150,0.95);
+}
+.navigation-bar__item,
+.navigation-bar__left,
+.navigation-bar__right,
+.navigation-bar__center {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  line-height: normal;
+  height: 44px;
+  vertical-align: top;
+  overflow: visible;
+  display: block;
+  vertical-align: middle;
+  float: left;
+}
+.navigation-bar__left {
+  max-width: 50%;
+  width: 27%;
+  text-align: left;
+  line-height: 44px;
+}
+.navigation-bar__right {
+  max-width: 50%;
+  width: 27%;
+  text-align: right;
+  line-height: 44px;
+}
+.navigation-bar__center {
+  width: 46%;
+  text-align: center;
+  line-height: 44px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.navigation-bar__title {
+  line-height: 44px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+.navigation-bar__center:first-child:last-child {
+  width: 100%;
+}
+
+.toolbar-button,
+.toolbar-button--outline,
+.toolbar-button--quiet {
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 4px 10px;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-shadow: 0 1px none;
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 17px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.toolbar-button:active,
+.toolbar-button--outline:active,
+.toolbar-button--quiet:active {
+  background-color: rgba(0,0,0,0);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0.2;
+}
+.toolbar-button:disabled,
+.toolbar-button[disabled] {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.toolbar-button:focus,
+.toolbar-button--outline:focus,
+.toolbar-button--quiet:focus {
+  outline: 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.toolbar-button:hover,
+.toolbar-button--outline:hover,
+.toolbar-button--quiet:hover {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.toolbar-button--outline {
+  border: 1px solid #ffffff;
+  margin: auto 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.toolbar-button--material {
+  font-size: 22px;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0 12px;
+  height: 100%;
+  margin: 0;
+  border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  vertical-align: initial;
+}
+.toolbar-button--material:first-of-type {
+  margin-left: 4px;
+}
+.toolbar-button--material:last-of-type {
+  margin-right: 4px;
+}
+.toolbar-button--material:active {
+  opacity: 1;
+  background-color: rgba(255,255,255,0.15);
+}
+.back-button {
+  height: 44px;
+  line-height: 44px;
+  padding-left: 8px;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0);
+}
+.back-button:active {
+  opacity: 0.2;
+}
+.back-button__label {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+.back-button__icon {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  margin-right: 6px;
+}
+.back-button__icon:before {
+  font-family: 'Ionicons';
+  content: '\f3cf';
+  font-size: 32px;
+}
+.back-button--material {
+  font-size: 22px;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0 12px;
+  height: 100%;
+  margin: 0 0 0 4px;
+  border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  vertical-align: initial;
+  line-height: 56px;
+}
+.back-button--material__label {
+  display: none;
+  font-size: 20px;
+}
+.back-button--material__icon:before {
+  font-family: 'Material-Design-Iconic-Font';
+  content: '\f2ea';
+  font-size: 26px;
+}
+.back-button--material:active {
+  opacity: 1;
+  background-color: rgba(255,255,255,0.15);
+}
+
+/*Log in--------------------------------------------------------------------------------------*/
+.login-form {
+  text-align: center;
+  width: 80%;
+  margin: 40px auto 0;
+}
+
+input[type=number], input[type=password] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  outline: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.login-button {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(242,125,0);
+}
+
+.atras-button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.opc-login {
+  display: block;
+  margin: 8px auto 0 auto;
+  font-size: 14px;
+  padding: initial;
+}
+
+/*Elimina el highlight de la app-------------------------------------------------------------*/
+-webkit-tap-highlight-color: rgba(0,0,0,0);

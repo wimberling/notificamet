@@ -1,0 +1,43 @@
+<!--/////////////////////////////////////////////////////////////-->
+<!--TEMPLATE PARA VER LAS NOTIFICACIONES FAVORITAS DEL USUARIO (NOTIFICACIONES GUARDADAS)-->
+<ons-page>
+    <ons-toolbar>
+        <div class="navigation-bar">
+            <div class="left" class="navigation-bar__left">
+                <ons-toolbar-button
+                    ng-click="app.slidingMenu.toggleMenu()">
+                    <ons-icon icon="ion-navicon-round"></ons-icon>                         
+                </ons-toolbar-button>
+            </div>
+            <div class="center" class="navigation-bar__center">
+                Favoritos
+            </div>
+            <div class="right" class="navigation-bar__right">
+            
+            </div>
+        </div>
+    </ons-toolbar>   
+        
+        <!--revisa el JSON para mostrar aqui solo las notificaciones GUARDADAS por el usuario-->
+    <ons-list ng-controller="myCtrl">
+        <ons-list-item ng-repeat="msg in timeline" modifier="tappable" class="item">
+            <header>
+                <span class="item-title" style="color:rgba(0,56,150,0.80)">{{ msg.titulo }}</span>
+            </header>
+            <ons-row>                   
+                <ons-col> 
+                    <p class="item-desc">{{ msg.texto }}</p>
+                </ons-col>
+                <ons-col width="20px">                  
+                    <ons-icon class="item-favorite" icon="ion-ios-heart"></ons-icon>                    
+                </ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col>
+                    <span class="item-label">{{ msg.fecha }}</span>
+                </ons-col>    
+            </ons-row>
+        </ons-list-item>  
+    </ons-list>
+</ons-page>
+

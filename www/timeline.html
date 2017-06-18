@@ -1,0 +1,178 @@
+<ons-navigator var="app.navi" page="timeline.html"></ons-navigator>
+
+    <!--/////////////////////////////////////////////////////////////-->
+    <!--TEMPLATE PARA VER EL DASHBOARD DE LA APLICACIÓN-->
+    <ons-template id="timeline.html">
+        <ons-page id="dashboard">
+            <ons-toolbar>
+                <div class="navigation-bar">
+                    <div class="left" class="navigation-bar__left">
+                        <ons-toolbar-button 
+                            ng-click="app.slidingMenu.toggleMenu()">
+                            <ons-icon icon="ion-navicon-round"></ons-icon>                         
+                        </ons-toolbar-button>
+                    </div>
+                    <div class="center" class="navigation-bar__center">
+                        NotificaMet
+                    </div>
+                    <div class="right" class="navigation-bar__right">
+                        <!-- <a id="btn-login" type="button" href="login.html">Login
+                            <ons-icon icon="ion-log-in"></ons-icon>
+                        </a>boton de logout TENTATIVO sería un cuadro de dialogo para cerrar la sesión-->
+                         <ons-button class="btn-log"
+                            modifier="quiet" ng-hide="home"
+                            ng-click="login.show()">Login
+                            <ons-icon icon="ion-log-in"></ons-icon>
+                        </ons-button>
+                        <ons-button class="btn-log"
+                            modifier="quiet" ng-show="home"
+                            ng-click="ons.notification.confirm({message: '¿Desea cerrar sesión?'})">Logout
+                            <ons-icon icon="ion-log-out"></ons-icon>
+                        </ons-button>
+                    </div>
+                </div>
+            </ons-toolbar>
+            
+            <!--pullhook debe ir aqui-->
+            
+            <!--<p style="text-align: center">
+                <ons-button ng-hide="home" ng-click="login.show()">Show modal</ons-button>
+            </p>-->
+            
+            <ons-list ng-controller="myCtrl">
+                <ons-list-item class="item" var="home" ng-repeat="msg in timeline"
+                    ng-click="app.navi.pushPage('notificacion.html', msg)" modifier="tappable">
+                    <ons-row>                   
+                        <ons-col width="60px"> 
+                            <div class="item-thum" ng-if="msg.broadcast">
+                                <img class="list__item__thumbnail" src="img/msj-broadcast.png" alt="icono notificacion">
+                            </div>
+                            <div class="item-thum" ng-hide="msg.broadcast">
+                                <img class="list__item__thumbnail" src="img/msj_notificacion.jpg" alt="icono notificacion">
+                            </div>
+                        </ons-col>
+                        <ons-col>
+                            <br />
+                            <span class="item-title">{{ msg.titulo }}</span>
+                            <br />
+                            <span class="item-desc">{{ msg.texto }}</span>
+                            <!--<span class="item-label">Tap para ver...</span>-->
+                        </ons-col>
+                        <ons-col width="10px">  
+                            <!--el corazon tiene que ser un boton-->
+                            <ons-icon class="item-heart" icon="ion-ios-heart-outline"></ons-icon>
+                        </ons-col>
+                    </ons-row>
+                    <ons-row>
+                        <ons-col>
+                            <span class="item-fecha">{{ msg.fecha }}</span>
+                        </ons-col>    
+                    </ons-row>
+                </ons-list-item>  
+            </ons-list>
+        </ons-page>
+    </ons-template>
+    <!--/////////////////////////////////////////////////////////////-->
+    <!--TEMPLATE PARA VER LA DESCRIPCIÓN DE LA NOTIFICACIÓN-->
+    <ons-template id="notificacion.html">
+        <ons-page id="notification" ng-controller="NotificacionController as verNotifi" ons-init="verNotifi.init($event)">
+            <ons-toolbar>
+                <div class="navigation-bar">
+                    <div class="left" class="navigation-bar__left">
+                        <ons-back-button></ons-back-button>  
+                    </div>
+                    <div class="center" class="navigation-bar__center">
+                        Ver notificación
+                    </div>
+                </div>
+            </ons-toolbar>
+            
+            <ons-list modifier="inset" style="margin-top: 10px">
+                <ons-list-item class="item">
+                    <ons-row>
+                        <ons-col width="60px"> 
+                            <div class="item-thum"><!--si es broadcast mostrar logo naranja sino icono azul--></div>
+                        </ons-col>
+                        <ons-col>
+                            <header>
+                                <span class="item-title"> {{ msg.titulo }} </span>
+                                <span class="item-fecha"></span>
+                            </header>
+                                <p class="item-desc">desc</p>
+                        </ons-col>
+                    </ons-row>
+                </ons-list-item>
+            </ons-list>
+            
+            <!--<p class="item-desc">{{ msg.texto }}</p>-->
+        </ons-page>
+    </ons-template>
+    <!--/////////////////////////////////////////////////////////////-->
+    <!--MODAL PARA INICIAR SESIÓN (PANTALLA DE LOGIN)-->
+    <ons-modal var="login" direction="up" style="background-color:white">
+    
+        <center>
+            <img class="logo" src="img/logo-notificamet4.PNG" alt="logo-notificamet"/>            
+        </center>
+
+        <div class="login-form">
+            <input id="id1" type="number" class="text-input--underbar" placeholder="Cédula" ng-model="cedula" name="cedula" required>
+            <input type="password" ng-minlength="1" class="text-input--underbar" placeholder="Contraseña" ng-model="password" name="password" required>
+            <br>
+            <br>
+            <ons-button ng-disabled="!cedula || !password"
+                modifier="large" class="login-button" type="submit">
+                Iniciar sesión
+            </ons-button>
+        </div>
+        
+        <div style="text-align: center">
+            <p>
+                <ons-button 
+                    modifier="large--quiet" class="atras-button" ng-click="login.hide()">
+                    Atrás
+                </ons-button>
+            </p>
+        </div>
+        
+    </ons-modal>
+    
+<!--COMENTARIOS DE COMPLEMENTO-->
+
+    <!-- 
+       <!--/////////////////////////////////////////////////////////////
+      ESTO IBA EN EL TOOLBAR CENTER DE notificacion.html {{ app.navi.topPage.data.title }} 
+      TAMBIEN QUITÉ EL SEGUNDO PARAMETRO QUE RECIBÍA EL PUSHPAGE EN timeline.html
+      
+       <!--/////////////////////////////////////////////////////////////
+      MEJORA <script>
+            ons.ready(function() {
+                var pullHook = document.getElementById('pull-hook');
+
+                pullHook.addEventListener('changestate', function(event) {
+                    var message = '';
+
+                    switch (event.state) {
+                        case 'initial':
+                            message = 'Hale para actualizar';
+                            break;
+                        case 'preaction':
+                            message = 'Release';
+                            break;
+                        case 'action':
+                            message = 'Cargando...';
+                        break;
+                    }
+
+                    pullHook.innerHTML = message;
+                });
+
+                pullHook.onAction = function(done) {
+                    setTimeout(done, 1000);
+                };
+            });
+        </script>
+        
+        <ons-pull-hook id="pull-hook">
+            Hale para actualizar
+        </ons-pull-hook>-->
